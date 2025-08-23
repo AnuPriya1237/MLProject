@@ -2,4 +2,5 @@
 *. ML_PROJ
 # ignore ML_proj .egg
 *.egg-info/
+.artifacts
 

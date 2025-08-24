@@ -1,0 +1,5 @@
+[2025-08-24 15:09:39,964] 23 root - Data ingestion starting
+[2025-08-24 15:09:39,966] 26 root - read the raw data
+[2025-08-24 15:09:39,968] 30 root - raw data has been saved to its path
+[2025-08-24 15:09:39,968] 31 root - train_test_split starts...
+[2025-08-24 15:09:39,970] 38 root - Ingestion of the data is completed.

@@ -1,0 +1,11 @@
+[2025-08-24 15:10:25,846] 23 root - Data ingestion starting
+[2025-08-24 15:10:25,847] 26 root - read the raw data
+[2025-08-24 15:10:25,848] 30 root - raw data has been saved to its path
+[2025-08-24 15:10:25,848] 31 root - train_test_split starts...
+[2025-08-24 15:10:25,850] 38 root - Ingestion of the data is completed.
+[2025-08-24 15:10:25,850] 68 root - Transforming data...
+[2025-08-24 15:10:25,850] 70 root - fetching train and test data
+[2025-08-24 15:10:25,851] 74 root - Read train and test data completed
+[2025-08-24 15:10:25,851] 75 root - Obtaining preprocessor object
+[2025-08-24 15:10:25,851] 29 root - fetching training data from artifacts
+[2025-08-24 15:10:25,851] 33 root - seperating numerical and categorical features...

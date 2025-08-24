@@ -1,0 +1,39 @@
+[2025-08-24 15:11:28,289] 23 root - Data ingestion starting
+[2025-08-24 15:11:28,290] 26 root - read the raw data
+[2025-08-24 15:11:28,291] 30 root - raw data has been saved to its path
+[2025-08-24 15:11:28,291] 31 root - train_test_split starts...
+[2025-08-24 15:11:28,293] 38 root - Ingestion of the data is completed.
+[2025-08-24 15:11:28,293] 68 root - Transforming data...
+[2025-08-24 15:11:28,293] 70 root - fetching train and test data
+[2025-08-24 15:11:28,294] 74 root - Read train and test data completed
+[2025-08-24 15:11:28,294] 75 root - Obtaining preprocessor object
+[2025-08-24 15:11:28,294] 29 root - fetching training data from artifacts
+[2025-08-24 15:11:28,294] 33 root - seperating numerical and categorical features...
+[2025-08-24 15:11:28,296] 53 root - Numerical columns standard scaling completed:      reading_score  writing_score
+0               72             74
+1               90             88
+2               95             93
+3               57             44
+4               78             75
+..             ...            ...
+995             99             95
+996             55             55
+997             71             65
+998             78             77
+999             86             86
+
+[1000 rows x 2 columns]
+[2025-08-24 15:11:28,297] 54 root - Categorical columns encoding completed:      gender race_ethnicity parental_level_of_education         lunch test_preparation_course
+0    female        group B           bachelor's degree      standard                    none
+1    female        group C                some college      standard               completed
+2    female        group B             master's degree      standard                    none
+3      male        group A          associate's degree  free/reduced                    none
+4      male        group C                some college      standard                    none
+..      ...            ...                         ...           ...                     ...
+995  female        group E             master's degree      standard               completed
+996    male        group C                 high school  free/reduced                    none
+997  female        group C                 high school  free/reduced               completed
+998  female        group D                some college      standard               completed
+999  female        group D                some college  free/reduced                    none
+
+[1000 rows x 5 columns]

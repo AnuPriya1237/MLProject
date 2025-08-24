@@ -1,0 +1,15 @@
+[2025-08-24 15:12:55,894] 23 root - Data ingestion starting
+[2025-08-24 15:12:55,895] 26 root - read the raw data
+[2025-08-24 15:12:55,896] 30 root - raw data has been saved to its path
+[2025-08-24 15:12:55,896] 31 root - train_test_split starts...
+[2025-08-24 15:12:55,898] 38 root - Ingestion of the data is completed.
+[2025-08-24 15:12:55,898] 68 root - Transforming data...
+[2025-08-24 15:12:55,898] 70 root - fetching train and test data
+[2025-08-24 15:12:55,899] 74 root - Read train and test data completed
+[2025-08-24 15:12:55,899] 75 root - Obtaining preprocessor object
+[2025-08-24 15:12:55,899] 29 root - fetching training data from artifacts
+[2025-08-24 15:12:55,899] 33 root - seperating numerical and categorical features...
+[2025-08-24 15:12:55,899] 53 root - Numerical columns standard scaling completed: Index(['reading_score', 'writing_score'], dtype='object')
+[2025-08-24 15:12:55,899] 54 root - Categorical columns encoding completed: Index(['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch',
+       'test_preparation_course'],
+      dtype='object')

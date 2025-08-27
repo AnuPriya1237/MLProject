@@ -12,6 +12,7 @@ from sklearn.tree import DecisionTreeRegressor
 # from xgboost import XGBRegressor
 from src.exception import CustomException
 from src.logger import logging
+from sklearn.model_selection import GridSearchCV
 
 @dataclass
 class ModelTrainerConfig:
@@ -39,8 +40,47 @@ class ModelTrainer:
                 # "XGBRegressor": XGBRegressor(),
                 "AdaBoost Regressor": AdaBoostRegressor()
             }
+            
+            params = {
+                "Linear Regression": {},
+                
+                "Lasso": {
+                    'selection': ['cyclic', 'random'],
+                    'max_iter': [50, 100],
+                    'alpha': [0, 0.1, 0.3, 1]
+                },
 
-            model_report:dict=evalute_model(x_train=x_train,y_train=y_train,x_test=x_test,y_test=y_test,models=models)
+                "Ridge": {
+                    'solver': ['auto', 'svd', 'cholesky', 'sparse_cg', 'sag', 'saga'],
+                    'max_iter': [50, 100],
+                    'alpha': [0, 0.1, 1, 0.5]
+                },
+
+                "K-Neighbors Regressor": {
+                    'n_neighbors': [5, 2, 3, 6],
+                    'weights': ['uniform', 'distance'],
+                    'algorithm': ['auto', 'ball_tree', 'kd_tree']
+                },
+
+                "Decision Tree": {
+                    'criterion': ['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                    'max_features': ['sqrt', 'log2', None],
+                    'splitter': ['best', 'random']
+                },
+
+                "Random Forest Regressor": {
+                    'criterion': ['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                    'max_features': ['sqrt', 'log2', None]
+                },
+
+                "AdaBoost Regressor": {
+                    'n_estimators': [20, 50, 100],
+                    'learning_rate': [0.5, 1.0, 0.3],
+                    'loss': ['linear', 'square', 'exponential']
+                }
+            }
+
+            model_report:dict=evalute_model(x_train=x_train,y_train=y_train,x_test=x_test,y_test=y_test,models=models,params=params)
 
             best_model_score=max(sorted(list(model_report.values())))
             best_model_name=list(model_report.keys())[list(model_report.values()).index(best_model_score)]

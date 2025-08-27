@@ -1,0 +1,19 @@
+[2025-08-27 14:09:49,720] 24 root - Data ingestion starting
+[2025-08-27 14:09:49,721] 27 root - read the raw data
+[2025-08-27 14:09:49,723] 33 root - raw data has been saved to its path
+[2025-08-27 14:09:49,723] 34 root - train_test_split starts...
+[2025-08-27 14:09:49,724] 41 root - Ingestion of the data is completed.
+[2025-08-27 14:09:49,724] 71 root - Transforming data...
+[2025-08-27 14:09:49,724] 73 root - fetching train and test data
+[2025-08-27 14:09:49,725] 77 root - Read train and test data completed
+[2025-08-27 14:09:49,725] 78 root - Obtaining preprocessor object
+[2025-08-27 14:09:49,725] 29 root - fetching training data from artifacts
+[2025-08-27 14:09:49,726] 33 root - seperating numerical and categorical features...
+[2025-08-27 14:09:49,726] 53 root - Numerical columns standard scaling completed: Index(['reading_score', 'writing_score'], dtype='object')
+[2025-08-27 14:09:49,726] 54 root - Categorical columns encoding completed: Index(['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch',
+       'test_preparation_course'],
+      dtype='object')
+[2025-08-27 14:09:49,726] 82 root - train and test df with independent nad target features
+[2025-08-27 14:09:49,726] 89 root -  Applying preprocessor object on training and train  dataframe
+[2025-08-27 14:09:49,732] 103 root - saved preprocessing object
+[2025-08-27 14:09:49,735] 90 root - Best model found on both training and testing datasets
